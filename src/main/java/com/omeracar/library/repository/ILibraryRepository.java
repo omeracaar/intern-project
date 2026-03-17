@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface ILibraryRepository extends JpaRepository<Library,Long> {
 
-    List<Library> findRecIsDeletedFalse();
+    List<Library> findByRecIsDeletedFalse();
 
     Optional<Library> findByIdAndRecIsDeletedFalse(Long id);
 

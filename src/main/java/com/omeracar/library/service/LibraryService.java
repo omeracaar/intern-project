@@ -160,5 +160,4 @@ public class LibraryService {
         return ResponseEntity.ok(LibraryMapper.toDto(activatedLibrary));
     }
 
-
 }
