@@ -13,6 +13,12 @@ public class BookMapper {
     private BookMapper (){} //new engellemek için private constructor
 
     public static BookResponseDto toDto(Book book, Double averageRating){
+
+        //book boş gelirse dtosu da boş dönsün
+        if (book == null) {
+            return null;
+        }
+
         List<String> comments= book.getReviews() != null
                 ? book.getReviews().stream()
                 .filter(review -> !review.isRecIsDeleted()) //soft delete yaptıklarımı geitrmiyorum

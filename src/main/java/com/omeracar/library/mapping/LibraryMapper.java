@@ -12,6 +12,12 @@ public class LibraryMapper {
     private LibraryMapper() {} //new engellemek için private constructor
 
     public static LibraryResponseDto toDto(Library library) {
+
+        //library boş gelirse dtosu da null dönsün
+        if (library == null) {
+            return null;
+        }
+
         List<String> bookNames = library.getBooks() != null
                 ? library.getBooks().stream()
                 .filter(book -> !book.isRecIsDeleted()) //soft delete yapılanları getirmemesi için
