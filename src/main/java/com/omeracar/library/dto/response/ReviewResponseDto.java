@@ -11,11 +11,9 @@ public class ReviewResponseDto {
 
     private Long id;
 
-    private String firstName;
-
     private String content;
 
-    private int rating;
+    private Double rating;
 
     private String bookName;
 }

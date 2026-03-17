@@ -5,11 +5,9 @@ import lombok.Data;
 @Data
 public class ReviewRequestDto {
 
-    private String firstName;
-
     private String content;
 
-    private int rating;
+    private Double rating;
 
-    private Long bookId; //yorum yapilan kitap
+    private Long bookId; //yorum yapılan kitap
 }

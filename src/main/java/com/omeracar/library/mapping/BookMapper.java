@@ -31,7 +31,7 @@ public class BookMapper {
                 book.getBookName(),
                 book.getAuthor(),
                 book.getPageCount(),
-                book.getLibrary() != null ? book.getLibrary().getName() : "Bir kütüphaneye ait değil",
+                book.getLibrary() != null ? book.getLibrary().getName() : "Not assigned to any library",
                 comments,
                 averageRating
         );

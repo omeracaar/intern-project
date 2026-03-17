@@ -14,11 +14,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Review extends BaseEntity{
 
-    private String firstName;
-
     private String content;
 
-    private int rating;
+    private Double rating;
 
     @ManyToOne
     @JoinColumn(name = "book_id")
