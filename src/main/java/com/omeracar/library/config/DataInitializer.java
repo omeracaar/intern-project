@@ -28,6 +28,12 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        //her run ettiğimde tekrar record eklememesi için
+        if (libraryRepository.count() > 0) {
+            log.info("Databese is already contains records");
+            return;
+        }
+
         Faker faker = new Faker();
         Random random = new Random();
 
