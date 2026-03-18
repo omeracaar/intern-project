@@ -8,7 +8,7 @@ public class ReviewMapper {
 
     private ReviewMapper (){} //new engellemek için private constructor
 
-    public ReviewResponseDto toDto(Review review){
+    public static ReviewResponseDto toDto(Review review){
 
         if (review == null){
             return null;

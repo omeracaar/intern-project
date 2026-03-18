@@ -29,6 +29,7 @@ public class BookService {
     private final IBookRepository bookRepository;
     private final ILibraryRepository libraryRepository;
 
+    //create
     public ResponseEntity<BookResponseDto> createBook(BookRequestDto requestDto) {
         log.info("Creating new book, name is: {} for library ID: {}", requestDto.getBookName(), requestDto.getLibraryId());
 
@@ -83,6 +84,7 @@ public class BookService {
         return ResponseEntity.ok(dtoPage);
     }
 
+    //get by id
     public ResponseEntity<BookResponseDto> getBookById(Long id) {
         log.info("Fetching book with ID: {}", id);
 
@@ -95,6 +97,7 @@ public class BookService {
         return ResponseEntity.ok(BookMapper.toDto(book, avgRating));
     }
 
+    //update
     public ResponseEntity<BookResponseDto> updateBook(Long id, BookRequestDto requestDto) {
         log.info("Updating book with ID: {}", id);
 
@@ -130,6 +133,7 @@ public class BookService {
         return ResponseEntity.ok(BookMapper.toDto(updatedBook, averageRating));
     }
 
+    //soft delete
     public ResponseEntity<String> deleteBook(Long id) {
         log.info("Deleting book with ID: {}", id);
 
