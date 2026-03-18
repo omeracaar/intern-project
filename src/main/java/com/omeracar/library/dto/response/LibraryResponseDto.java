@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -19,6 +20,7 @@ public class LibraryResponseDto {
 
     private String phoneNumber;
 
-    private List<String> bookDetails;
+    private LocalDateTime updatedAt;
 
+    private List<String> bookDetails;
 }

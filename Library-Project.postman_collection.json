@@ -144,35 +144,6 @@
 					"response": []
 				},
 				{
-					"name": "Update Library",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"İstanbul Merkez Kütüphane\",\r\n    \"location\": \"Kadıköy / İstanbul\",\r\n    \"phoneNumber\": \"02169998877\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8080/api/libraries/2",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"libraries",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Soft Delete Library",
 					"request": {
 						"method": "DELETE",
@@ -394,6 +365,61 @@
 								"books",
 								"1",
 								"activate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Create Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"For entering Spring this book will help a lot\",\r\n  \"rating\": 5.0,\r\n  \"bookId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"reviews",
+								"1"
 							]
 						}
 					},

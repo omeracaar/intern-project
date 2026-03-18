@@ -30,6 +30,7 @@ public class LibraryMapper {
                 library.getName(),
                 library.getLocation(),
                 library.getPhoneNumber(),
+                library.getUpdatedAt(),
                 bookNames
         );
     }
