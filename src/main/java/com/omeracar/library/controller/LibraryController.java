@@ -26,8 +26,6 @@ public class LibraryController {
     public ResponseEntity<Page<LibraryResponseDto>> getAllLibraries(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        // Serviste 'name' parametresi kalmıştı ama kullanmıyorduk,
-        // burayı servisteki güncel parametrelere göre paslıyoruz.
         return libraryService.getAllLibraries(null, page, size);
     }
 
